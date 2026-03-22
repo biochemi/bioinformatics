@@ -271,3 +271,19 @@ Add **Open Source Society University** to your [Linkedin](https://www.linkedin.c
 * **Contributors**: [contributors](https://github.com/open-source-society/bioinformatics/graphs/contributors)
 
 ## References
+
+## GMX_fayyaz ligand-protein MD pipeline
+
+A modular, interactive pipeline has been added under `pipeline/`:
+
+- Main runner: `pipeline/gmx_fayyaz_pipeline.sh`
+- Reusable shell helpers: `pipeline/lib/common.sh`
+- Python step utilities in `pipeline/scripts/`
+
+Run from repository root:
+
+```bash
+bash pipeline/gmx_fayyaz_pipeline.sh
+```
+
+The pipeline is split into small, traceable stages (PDB retrieval, receptor/ligand prep, forcefield handling, ligand topology fixes, complex build, topology patching, solvation, ions, EM, equilibration, and production setup).
